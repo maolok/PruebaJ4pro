@@ -31,7 +31,7 @@ app.get('/get_data', function (req, res) {
       
 });
 //cron para ejecutar actualizacion datos cada hora
-cron.schedule('* * * * *', function(){
+cron.schedule('0 * * * *', function(){
     updatedata();
     console.log('Datos Api Actualizados!');
 });
